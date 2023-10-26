@@ -1,0 +1,40 @@
+	<!doctype html>
+	<html lang="fr">
+		<head>
+			<meta charset="utf-8">
+			<title>Récapitulatif</title>
+			<link rel ="stylesheet" href= {{ url_for("static", filename="styleformulaire.css") }}
+		</head>
+		<body>
+			<div>
+    				<h1>Carnet de contact</h1>
+    				<input>Nom</input>
+    			</div>
+    			<div>
+    				<input>Prenom</input>
+    			</div>
+    			<div>
+    				<label for="catégorie">Catégorie:</label>
+					<select id="catégorie">
+  						<option value="">--Choisis une option--</option>
+  						<option value="famille">Famille</option>
+  						<option value="travail">Travail</option>
+  						<option value="amis">Amis</option>
+				</select>
+    			</div>
+    			<div>
+				<select id="catégorie">
+  					<option value="">-- --</option>
+  					<option value="pf">+689</option>
+  					<option value="fr">+33</option>
+				</select><input>Téléphone</input>
+    			</div>
+    			<div>
+    				<input>Mail</input>
+    			</div>
+    			<div>
+    				<input>Adresse</input>
+    			</div>
+    				<button>confirmer</button>
+		</body>
+	</html>
