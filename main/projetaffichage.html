@@ -1,17 +1,22 @@
 	<!doctype html>
 	<html lang="fr">
 		<head>
+			<link href="styles/style.css" rel="stylesheet" type="text/css" />
 			<meta charset="utf-8">
 			<title>Récapitulatif</title>
-			<link rel ="stylesheet" href= {{ url_for("static", filename="styleformulaire.css") }}
+			<link rel ="stylesheet" href= "css.css" >
 		</head>
 		<body>
 			<div>
     				<h1>Carnet de contact</h1>
-    				<input>Nom</input>
     			</div>
-    			<div>
-    				<input>Prenom</input>
+    			<div class="container">
+  			<div class="item">
+  			<div>
+				Nom: <input></input>
+  			</div>
+				<div>
+    				Prenom: <input></input>
     			</div>
     			<div>
     				<label for="catégorie">Catégorie:</label>
@@ -23,18 +28,20 @@
 				</select>
     			</div>
     			<div>
-				<select id="catégorie">
+				Téléphone: <select id="catégorie">
   					<option value="">-- --</option>
   					<option value="pf">+689</option>
   					<option value="fr">+33</option>
-				</select><input>Téléphone</input>
+				</select><input></input>
     			</div>
     			<div>
-    				<input>Mail</input>
+    				Mail: <input></input>
     			</div>
     			<div>
-    				<input>Adresse</input>
+    				Adresse: <input></input>
     			</div>
     				<button>confirmer</button>
+    			</div>
+    			</div>
 		</body>
 	</html>
