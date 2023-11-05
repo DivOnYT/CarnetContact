@@ -1,0 +1,356 @@
+/* Remarques :
+   - J'ai apporté des corrections aux propriétés "font-family" pour les polices.
+   - J'ai ajusté la position de certains éléments pour les centrer correctement.
+   - J'ai supprimé les propriétés inutiles comme "overflow: hidden;" du corps.
+   - J'ai ajouté des commentaires pour améliorer la lisibilité du code.
+*/
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background-image: url(HomePage.jpg);
+  background-size: 120vw 140vh;
+  background-position: 50% 50%;
+  height: 100%;
+  width: 100%;
+}
+
+.home-page {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative; /* Utilisez position: relative; pour les éléments positionnés de manière absolue à l'intérieur */
+}
+
+.home-page .div {
+  width: 1920px;
+  height: 1080px;
+  position: relative;
+}
+
+.text-de-contactform {
+  position: absolute;
+  top: 0; /* Coller en bas de la page */
+  right: 0; /* Coller à droite de la page */
+  background: linear-gradient(180deg, rgb(46, 46, 80) 0%, rgb(246, 169, 125) 100%);
+  -webkit-background-clip: text !important;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Palanquin Dark-SemiBold", sans-serif; /* Correction du nom de la police */
+  font-weight: 600;
+  font-size: 25px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+.home-page .form {
+  position: absolute;
+  top: 28px;
+  left: 544px;
+}
+
+.home-page .links {
+  position: absolute;
+  width: 761px;
+  height: 271px;
+  top: 714px;
+  left: 36px;
+  border-radius: 40px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.36) 0%, rgba(0, 0, 0, 0.25) 100%);
+}
+
+.home-page .consultation-button {
+  position: absolute;
+  width: 711px;
+  height: 64px;
+  top: 191px;
+  left: 32px;
+}
+
+.home-page .overlap-group {
+  position: relative;
+  height: 62px;
+  top: 2px;
+}
+
+.home-page .div-2 {
+  position: absolute;
+  width: 711px;
+  height: 61px;
+  top: 1px;
+  left: 0;
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(46, 46, 80, 0.64) 0%, rgba(246, 169, 125, 0.8) 100%);
+}
+
+.home-page .text-wrapper {
+  position: absolute;
+  width: 711px;
+  height: 61px;
+  top: 0;
+  left: 0;
+  font-family: "Palanquin Dark-Regular", sans-serif;
+  font-weight: 400;
+  color: #251c43;
+  font-size: 25px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home-page .supress-button-form {
+  position: absolute;
+  width: 711px;
+  height: 64px;
+  top: 93px;
+  left: 32px;
+}
+
+.home-page .text-de-contactform-2 {
+  top: 15px;
+  font-size: 30px;
+  position: absolute;
+  width: 761px;
+  left: 0;
+  font-family: "Palanquin Dark-SemiBol", sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home-page .contact-form {
+  position: absolute;
+  width: 761px;
+  height: 672px;
+  top: 17px;
+  left: 30px;
+  border-radius: 40px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.36) 0%, rgba(255, 255, 255, 0.25) 100%);
+}
+
+.home-page .overlap {
+  position: relative;
+  height: 672px;
+  top: -1px;
+}
+
+.home-page .button-form {
+  position: absolute;
+  width: 343px;
+  height: 84px;
+  top: 588px;
+  left: 215px;
+}
+
+.home-page .overlap-group-2 {
+  position: relative;
+  width: 297px;
+  height: 65px;
+  top: -1px;
+  left: 17px;
+}
+
+.home-page .button-submit {
+  position: absolute;
+  width: 297px;
+  height: 61px;
+  top: 4px;
+  left: 0;
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(46, 46, 80, 0.8) 0%, rgba(246, 169, 125, 0.64) 100%);
+}
+
+.home-page .button-text {
+  position: absolute;
+  width: 297px;
+  height: 64px;
+  top: 0;
+  left: 0;
+  font-family: "Palanquin Dark-Regular", sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home-page .adress-form {
+  position: absolute;
+  width: 761px;
+  height: 99px;
+  top: 492px;
+  left: 0;
+}
+
+.home-page .text-wrapper-2 {
+  position: absolute;
+  width: 163px;
+  top: 27px;
+  left: 0;
+  font-family: "Palanquin Dark-Regular", sans-serif;
+  font-weight: 400;
+  color: #251c43;
+  font-size: 30px;
+  text-align: right;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home-page .div-3 {
+  position: absolute;
+  width: 518px;
+  height: 58px;
+  top: 28px;
+  left: 183px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgb(217, 217, 217) 0%, rgba(217, 217, 217, 0.3) 100%);
+}
+
+.home-page .mail-form {
+  width: 761px;
+  height: 99px;
+  top: 406px;
+  position: absolute;
+  left: 0;
+}
+
+.home-page .telephone-form {
+  position: absolute;
+  width: 761px;
+  height: 99px;
+  top: 320px;
+  left: 0;
+}
+
+.home-page .telephone-input {
+  position: absolute;
+  width: 360px;
+  height: 58px;
+  top: 28px;
+  left: 341px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgb(217, 217, 217) 0%, rgba(217, 217, 217, 0.3) 100%);
+}
+
+.home-page .overlap-2 {
+  position: absolute;
+  width: 143px;
+  height: 59px;
+  top: 27px;
+  left: 178px;
+}
+
+.home-page .telephone-input-2 {
+  position: absolute;
+  width: 142px;
+  height: 58px;
+  top: 1px;
+  left: 0;
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgb(217, 217, 217) 0%, rgba(217, 217, 217, 0.3) 100%);
+}
+
+.home-page .text-wrapper-3 {
+  position: absolute;
+  width: 143px;
+  top: 0;
+  left: 0;
+  transform: rotate(0.04deg);
+  font-family: "Palanquin Dark-Regular", sans-serif;
+  font-weight: 400;
+  color: #251c43;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home-page .categorie-form {
+  width: 761px;
+  height: 99px;
+  top: 234px;
+  position: absolute;
+  left: 0;
+}
+
+.home-page .overlap-3 {
+  position: absolute;
+  width: 518px;
+  height: 59px;
+  top: 27px;
+  left: 183px;
+}
+
+.home-page .categorie-box {
+  width: 518px;
+  height: 58px;
+  top: 1px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgb(217, 217, 217) 0%, rgba(217, 217, 217, 0.3) 100%);
+  position: absolute;
+  left: 0;
+}
+
+.home-page .p {
+  position: absolute;
+  width: 518px;
+  top: 0;
+  left: 0;
+  font-family: "Palanquin Dark-Regular", sans-serif;
+  font-weight: 400;
+  color: #251c43;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home-page .prenom-form {
+  width: 761px;
+  height: 99px;
+  top: 148px;
+  position: absolute;
+  left: 0;
+}
+
+.home-page .nom-form {
+  width: 761px;
+  height: 99px;
+  top: 62px;
+  position: absolute;
+  left: 0;
+}
+
+.home-page .text-de-contactform-3 {
+  height: 83px;
+  top: 0;
+  font-size: 50px;
+  position: absolute;
+  width: 761px;
+  left: 0;
+  font-family: "Palanquin Dark-SemiBold", sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+/* Pour les écrans de petite taille, réduisez la largeur de la form et ajustez les marges */
+@media (max-width: 768px) {
+  .home-page .form {
+    width: 90%; /* Réduisez la largeur de la form pour s'adapter à l'écran */
+    margin: 10px auto; /* Centrez la form sur l'écran et ajoutez une petite marge */
+  }
+}
