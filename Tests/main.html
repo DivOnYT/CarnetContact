@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
   <head>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -22,22 +22,30 @@
             </div>
             <div class="text-de-contactform-2">Actions Carnet de Contacts</div>
           </div>
-          <div class="contact-form">
+
+
+
+          <form class="contact-form" action="http://localhost/add_contact" method="post">
             <div class="overlap">
+
+
               <div class="button-form">
                 <div class="overlap-group-2">
-                  <div class="button-submit"></div>
-                  <div class="button-text">Envoyer</div>
+                  <input type="submit" class="button-submit" value=""/>
+                    <div class="button-text">Envoyer</div>
                 </div>
               </div>
+
               <div class="adress-form">
-                <div class="text-wrapper-2">Adresse :</div>
-                <div class="div-3"></div>
+                <label class="text-wrapper-2">Adresse :</label>
+                <input type="text" name="Adresse" class="div-3"/>
               </div>
+
               <div class="mail-form">
-                <div class="text-wrapper-2">Mail :</div>
-                <div class="div-3"></div>
+                <label class="text-wrapper-2">Mail :</label>
+                <input type="text" name="Mail" class="div-3"/>
               </div>
+
               <div class="telephone-form">
                 <div class="text-wrapper-2">Tel :</div>
                 <div class="telephone-input"></div>
@@ -46,24 +54,34 @@
                   <div class="text-wrapper-3">-- --</div>
                 </div>
               </div>
+
               <div class="categorie-form">
-                <div class="text-wrapper-2">Catégorie :</div>
+                <label class="text-wrapper-2" for="catégorie">Catégorie:</label>
                 <div class="overlap-3">
-                  <div class="categorie-box"></div>
-                  <p class="p">-- Choisis une option --</p>
+					<select id="catégorie"  class="categorie-box">
+  						<option class="p" value="">--Choisis une option--</option>
+  						<option  class="p" value="famille">Famille</option>
+  						<option class="p" value="travail">Travail</option>
+  						<option class="p" value="amis">Amis</option>
+                    </select>
                 </div>
               </div>
+
               <div class="prenom-form">
-                <div class="text-wrapper-2">Prénom :</div>
-                <div class="div-3"></div>
+                <label class="text-wrapper-2">Prénom :</label>
+                <input type="text" class="div-3" name="Prénom"/>
               </div>
+
               <div class="nom-form">
-                <div class="text-wrapper-2">Nom :</div>
-                <div class="div-3"></div>
+                <label class="text-wrapper-2">Nom :</label>
+                <input type="text" class="div-3" name="Nom"/>
               </div>
+
               <div class="text-de-contactform-3">Ajout de Contact</div>
             </div>
-          </div>
+          </form>
+
+
         </div>
         </div>
         </div>
