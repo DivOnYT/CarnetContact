@@ -9,7 +9,7 @@
       <div class="ConsultationDiv">
           <h1>Consultation des Contacts</h1>
           <div class="search-form">
-            <label class="text-wrapper-2">Label :</label>
+            <label class="text-wrapper-2">Rechercher :</label>
             <input type="text" class="div-3" name="Chercher"/>
           </div>
           <form class="contact-form" action="http://localhost/add_contact" method="post">
@@ -20,8 +20,15 @@
   						<option class="p" value="amis">Catégorie Amis</option>
                         <option class="p" value="nom">Par Nom</option>
                         <option class="p" value="lettre">Par Lettre</option>
+                        <option class="p" value="*">Tous les Contacts</option>
                     </select>
           </form>
+          <div class="SearchDiv">
+            <button onclick="window.location.href = 'http://localhost:5000/'" class="Search">
+                <h4>Search</h4>
+            </button>
+          </div>
+
     </div>
     </div>
   </body>

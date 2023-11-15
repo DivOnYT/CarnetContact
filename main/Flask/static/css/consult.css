@@ -15,6 +15,13 @@ body {
 }
 
 .ConsultDiv {
+    display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+  flex-direction: column;
+
   position: relative;
   background: black;
   text-align: center;
@@ -52,38 +59,41 @@ h1, p {
   width: 761px;
   height: 99px;
   position: relative;
-
 }
 
 .text-wrapper-2 {
   position: relative;
   width: 163px;
-  top: 27px;
-  left: 0;
   font-family: "Palanquin Dark-Regular", sans-serif;
   font-weight: 400;
-  color: #251c43;
+  color: #FFFFFF;
   font-size: 30px;
   text-align: right;
   letter-spacing: 0;
   line-height: normal;
 }
 
-.div-2 {
+.div-3 {
   position: relative;
-  width: 711px;
+  width: 518px;
+  height: 58px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgb(217, 217, 217) 0%, rgba(217, 217, 217, 0.3) 100%);
+}
+
+.Search {
+  position: relative;
+  top: 10px;
+  width: 297px;
   height: 61px;
-  top: 1px;
-  left: 0;
   border-radius: 20px;
   background: linear-gradient(180deg, rgba(46, 46, 80, 0.64) 0%, rgba(246, 169, 125, 0.8) 100%);
   cursor: pointer;
 }
 
-/* Pour les écrans de petite taille, réduisez la largeur de la form et ajustez les marges */
-@media (max-width: 768px) {
-  .home-page .form {
-    width: 90%; /* Réduisez la largeur de la form pour s'adapter à l'écran */
-    margin: 10px auto; /* Centrez la form sur l'écran et ajoutez une petite marge */
-  }
+.SearchDiv {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
