@@ -1,0 +1,66 @@
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  position: fixed;
+  background-image: url(../images/HomePage.jpg);
+  background-size: 100vw 100vh;
+  background-position: 100% 100%;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.ConsultDiv {
+    display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+  flex-direction: column;
+
+  position: relative;
+  background: black;
+  text-align: center;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 40px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.36) 10%, rgba(0, 0, 0, 0.25) 80%);
+
+}
+
+.ConsultationDiv {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+  flex-direction: column;
+}
+
+h1, p {
+  color: #FFFFFF;
+    font-size: 50px;
+}
+.Titre {
+  position: sticky;
+  z-index: 1;
+
+}
+.Contacts {
+    display: flex;
+    flex-direction: column;
+  justify-content: flex-start;
+    align-items: center;
+  max-height: 100%;
+}
+
+.ContactText {
+  font-size: 30px;
+}
