@@ -1,0 +1,21 @@
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background-image: url(../images/HomePage.jpg);
+  background-size: 100vw 100vh;
+  background-position: 100% 100%;
+  height: auto;
+  width: auto;
+}
+
+
+
+/* Pour les écrans de petite taille, réduisez la largeur de la form et ajustez les marges */
+@media (max-width: 768px) {
+  .home-page .form {
+    width: 90%; /* Réduisez la largeur de la form pour s'adapter à l'écran */
+    margin: 10px auto; /* Centrez la form sur l'écran et ajoutez une petite marge */
+  }
+}

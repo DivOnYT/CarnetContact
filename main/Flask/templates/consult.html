@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../static/css/consult.css" />
+    <title>Consultation des Contacts</title>
+  </head>
+  <body>
+    <div class="ConsultDiv">
+      <div class="ConsultationDiv">
+          <h1>Consultation des Contacts</h1>
+          <div class="search-form">
+            <label class="text-wrapper-2">Label :</label>
+            <input type="text" class="div-3" name="Chercher"/>
+          </div>
+          <form class="contact-form" action="http://localhost/add_contact" method="post">
+                <select id="catégorie"  class="categorie-box" name="Catégorie">
+  						<option class="p" value="">--Choisis une option de recherche--</option>
+  						<option  class="p" value="famille">Catégorie Famille</option>
+  						<option class="p" value="travail">Catégorie Travail</option>
+  						<option class="p" value="amis">Catégorie Amis</option>
+                        <option class="p" value="nom">Par Nom</option>
+                        <option class="p" value="lettre">Par Lettre</option>
+                    </select>
+          </form>
+    </div>
+    </div>
+  </body>
+</html>
