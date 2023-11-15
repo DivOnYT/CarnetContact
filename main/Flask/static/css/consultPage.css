@@ -64,3 +64,13 @@ h1, p {
 .ContactText {
   font-size: 30px;
 }
+
+.HomePage {
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 20px;
+  cursor: pointer;
+}
