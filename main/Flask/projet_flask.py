@@ -62,14 +62,16 @@ def add_contact():
 
 
 #######################################################################################################PAS FAIT
-@app.route("/consult", methods="post")
+
+
+@app.route("/consult", methods=["POST"])
 def recherche():
     if request.form['Catégorie'] == "*":
         return render_template('ConsultPage.html', Component=f"{request.form['Rechercher']}",
                                Titre='Visualisation des contact')
 
 
-@app.route("/consultPage", methods="get")
+@app.route("/consultPage", methods=["GET"])
 def resultat():
     catégorie = request.form['Catégorie']
     with sqlite3.connect("ContactBDD.db") as connection:
@@ -89,8 +91,12 @@ def resultat():
             f"SELECT nom,prenom,catégorie,teléphone,mail,adresse FROM ContactBDD WHERE lettre == {request.form['Rechercher']}")
 
 
-@app.route("/supression", methods="post")
+@app.route("/suppress")
 def supp():
+    return render_template("suppress.html")
+
+@app.route("/suppression", methods=["POST"])
+def suppression():
     with sqlite3.connect("ContactBDD.db") as connection:
         cursor = connection.cursor()
 
@@ -108,4 +114,4 @@ def page_not_found(e):
     return render_template('404.html'),404
 
 if __name__ == "__main__":
-    app.run(debug=True, port=8000)
+    app.run(debug=True)
