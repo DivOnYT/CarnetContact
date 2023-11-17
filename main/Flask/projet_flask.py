@@ -61,6 +61,47 @@ def add_contact():
             return render_template("consultPage.html", titre="Erreur dans l'Enregistrement du Contact.", Component=f"Le Contact n'a pas été enregistré dans la base de données car il existe déjà")
 
 
+#######################################################################################################PAS FAIT
+@app.route("/consult", methods="post")
+def recherche():
+    if request.form['Catégorie'] == "*":
+        return render_template('ConsultPage.html', Component=f"{request.form['Rechercher']}",
+                               Titre='Visualisation des contact')
+
+
+@app.route("/consultPage", methods="get")
+def resultat():
+    catégorie = request.form['Catégorie']
+    with sqlite3.connect("ContactBDD.db") as connection:
+        cursor = connection.cursor()
+
+    if catégorie == "*":
+        cursor.execute(
+            f"SELECT * FROM ContactBDD")
+    if catégorie == "famille" or "travail" or "amis":
+        cursor.execute(
+            f"SELECT nom,prenom,catégorie,teléphone,mail,adresse FROM ContactBDD WHERE catégorie == {request.form['catégorie']}")
+    if catégorie == "nom":
+        cursor.execute(
+            f"SELECT nom,prenom,catégorie,teléphone,mail,adresse FROM ContactBDD WHERE nom == {request.form['Rechercher']}")
+    if catégorie == "lettre":
+        cursor.execute(
+            f"SELECT nom,prenom,catégorie,teléphone,mail,adresse FROM ContactBDD WHERE lettre == {request.form['Rechercher']}")
+
+
+@app.route("/supression", methods="post")
+def supp():
+    with sqlite3.connect("ContactBDD.db") as connection:
+        cursor = connection.cursor()
+
+    cursor.execute(
+        f"DELETE id,nom,prenom,catégorie,teléphone,mail,adresse FROM ContactBDD WHERE nom={request.form['Nom']}")
+
+    connection.commit()
+
+
+
+###########################################################################################################""
 
 @app.errorhandler(404)
 def page_not_found(e):
