@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS users(
      nom TEXT,
      prenom TEXT,
      catégorie TEXT,
-     teléphone INTEGER,
+     teléphone TEXT,
      mail TEXT,
      adresse TEXT
 )

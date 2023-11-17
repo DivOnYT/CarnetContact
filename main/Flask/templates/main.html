@@ -10,7 +10,7 @@
       <div class="div">
         <div class="form">
           <div class="links">
-            <a href="http://localhost/consult">
+            <a href="http://localhost:5000/consult">
             <div class="consultation-button" >
               <div class="overlap-group">
                 <button class="div-2">
@@ -20,7 +20,7 @@
               </div>
             </div>
               </a>
-            <a href="http://localhost/suppress">
+            <a href="http://localhost:5000/suppress">
             <div class="supress-button-form">
               <div class="overlap-group">
                 <button class="div-2">
@@ -35,7 +35,7 @@
 
 
 
-          <form class="contact-form" action="http://localhost/add_contact" method="post">
+          <form class="contact-form" action="http://localhost:5000/confirmation" method="post">
             <div class="overlap">
 
 
@@ -48,24 +48,24 @@
               </div>
 
               <div class="adress-form">
-                <label class="text-wrapper-2">Adresse :</label>
-                <input type="text" name="Adresse" class="div-3"/>
+                <label class="text-wrapper-2">Adresse* :</label>
+                <input type="text" name="Adresse" class="div-3" required="required"/>
               </div>
 
               <div class="mail-form">
-                <label class="text-wrapper-2">Mail :</label>
-                <input type="text" name="Mail" class="div-3"/>
+                <label class="text-wrapper-2">Mail* :</label>
+                <input type="email" name="Mail" class="div-3" required="required"/>
               </div>
 
               <div class="telephone-form">
-                <label class="text-wrapper-2">Tel :</label>
-                <input type="number" name="Téléphone" class="div-3"/>
+                <label class="text-wrapper-2">Tel* : <h6>(Ex: +689 89 89 89 89)</h6></label>
+                <input type="tel" pattern="\+\d{2,3}\s(?:\d{2}\s){3}\d{2}" name="Téléphone" class="div-3" required="required"/>
               </div>
 
               <div class="categorie-form">
-                <label class="text-wrapper-2" for="catégorie">Catégorie:</label>
+                <label class="text-wrapper-2" for="catégorie">Catégorie* :</label>
                 <div class="overlap-3">
-					<select id="catégorie"  class="categorie-box" name="Catégorie">
+					<select id="catégorie"  class="categorie-box" name="Catégorie" required="required">
   						<option class="p" value="">--Choisis une option--</option>
   						<option  class="p" value="famille">Famille</option>
   						<option class="p" value="travail">Travail</option>
@@ -75,13 +75,13 @@
               </div>
 
               <div class="prenom-form">
-                <label class="text-wrapper-2">Prénom :</label>
-                <input type="text" class="div-3" name="Prénom"/>
+                <label class="text-wrapper-2">Prénom* :</label>
+                <input type="text" class="div-3" name="Prénom" required="required"/>
               </div>
 
               <div class="nom-form">
-                <label class="text-wrapper-2">Nom :</label>
-                <input type="text" class="div-3" name="Nom"/>
+                <label class="text-wrapper-2">Nom* :</label>
+                <input type="text" class="div-3" name="Nom" required="required"/>
               </div>
 
               <div class="text-de-contactform-3">Ajout de Contact</div>
