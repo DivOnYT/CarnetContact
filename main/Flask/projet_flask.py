@@ -44,15 +44,27 @@ def add_contact():
 
         cursor.execute("""
             INSERT INTO users (nom, prenom, catégorie, teléphone, mail, adresse)
-            VALUES (?, ?, ?, ?, ?, ?)
-        """, user)
+            SELECT ?, ?, ?, ?, ?, ?
+            WHERE NOT EXISTS (
+                SELECT 1 FROM users WHERE nom = ? AND prenom = ?
+            )
+        """, (*user, user[0], user[1]))
+        # Vérifier le nombre de lignes affectées par l'opération d'insertion
+        rows_affected = cursor.rowcount
+
         conn.commit()
         conn.close()
-        return render_template("consultPage.html", titre="Enregistrement du Contact Réussi.", Component=f"Le Contact Suivant a bien été enregistré dans la Base de Données : {nom}  {prénom} {catégorie} '{téléphone}' {adresse}  {mail}")
+
+        if rows_affected > 0:
+            return render_template("consultPage.html", titre="Enregistrement du Contact Réussi.", Component=f"Le Contact Suivant a bien été enregistré dans la Base de Données : {nom}  {prénom} {catégorie} '{téléphone}' {adresse}  {mail}")
+        else:
+            return render_template("consultPage.html", titre="Erreur dans l'Enregistrement du Contact.", Component=f"Le Contact n'a pas été enregistré dans la base de données car il existe déjà")
+
+
 
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'),404
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=8000)
