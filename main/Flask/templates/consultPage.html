@@ -14,13 +14,22 @@
           </div>
           <div class="Contacts">
             <p class="ContactText">
-			{{ Component }}
+                {{ Component }}
+                {% if contacts %}
+                    <ul>
+                        {% for contact in contacts %}
+                            <p class="ContactText">{{ contact }}</p>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
             </p>
 
           </div>
-        <button onclick="window.location.href = 'http://localhost:5000/'" class="HomePage">
-          <h4>Revenir sur la page d'accueil</h4>
-        </button>
+          <a href="{{ path }}">
+            <button  class="HomePage">
+                <h4>Revenir en Arrière</h4>
+            </button>
+          </a>
 
     </div>
     </div>

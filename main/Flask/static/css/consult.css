@@ -97,3 +97,21 @@ h1, p {
   justify-content: center;
   align-items: center;
 }
+
+.GoBack {
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 20px;
+  cursor: pointer;
+    margin-top: 60px;
+}
+
+.GoBackDiv {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

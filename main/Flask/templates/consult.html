@@ -9,13 +9,14 @@
     <div class="ConsultDiv">
       <div class="ConsultationDiv">
           <h1>Consultation des Contacts</h1>
-          <div class="search-form">
-            <label class="text-wrapper-2">Rechercher :</label>
-            <input type="text" class="div-3" name="Chercher"/>
-          </div>
-          <form class="contact-form" action="http://localhost:5000/add_contact" method="post">
-                <select id="catégorie"  class="categorie-box" name="Catégorie">
-  						<option class="p" value="" required="required">--Choisis une option de recherche--</option>
+
+          <form action="http://localhost:5000/consultPage" method="post">
+              <div class="search-form">
+                  <label class="text-wrapper-2">Rechercher :</label>
+                  <input type="text" class="div-3" name="Chercher"/>
+              </div>
+                <select id="catégorie"  class="categorie-box" name="Catégorie" required="required">
+  						<option class="p" value="">--Choisis une option de recherche--</option>
   						<option  class="p" value="famille">Catégorie Famille</option>
   						<option class="p" value="travail">Catégorie Travail</option>
   						<option class="p" value="amis">Catégorie Amis</option>
@@ -23,11 +24,16 @@
                         <option class="p" value="lettre">Par Lettre</option>
                         <option class="p" value="*">Tous les Contacts</option>
                     </select>
+              <button type="submit" class="Search">
+                  <h4>Search</h4>
+              </button>
           </form>
-          <div class="SearchDiv">
-            <button onclick="window.location.href = 'http://localhost:5000/'" class="Search">
-                <h4>Search</h4>
-            </button>
+          <div class="GoBackDiv">
+              <a href="http://localhost:5000/">
+                <button  class="GoBack">
+                    <h4>Retour en arrière</h4>
+                </button>
+              </a>
           </div>
 
     </div>

@@ -9,22 +9,24 @@
     <div class="ConsultDiv">
       <div class="ConsultationDiv">
           <h1>Suppression d'un Contact Par Nom</h1>
-           <form action="http://localhost/suppression" method="post">
-            <div class="suppress-form">
-                <label class="text-wrapper-2">Nom :</label>
-                <input type="text" class="div-3" name="Supprimer" required="required"/>
-            </div>
+           <form action="http://localhost:5000/suppression" method="post">
+                <div class="suppress-form">
+                    <label class="text-wrapper-2">Nom :</label>
+                    <input type="text" class="div-3" name="Nom" required="required"/>
+                </div>
 
-            <div class="SuppressDiv">
-                <button type="submit" class="suppress">
-                    <h4>Supprimer le Contact</h4>
-                </button>
-            </div>
+                <div class="SuppressDiv">
+                    <button type="submit" class="suppress">
+                        <h4>Supprimer le Contact</h4>
+                    </button>
+                </div>
            </form>
           <div class="HomePageDiv">
-              <button onclick="window.location.href = 'http://localhost/'" class="HomePage">
-                  <h4>Retour a la page d'accueil</h4>
-              </button>
+              <a href="http://localhost:5000/">
+                <button  class="HomePage">
+                    <h4>Retour en arrière</h4>
+                </button>
+              </a>
           </div>
 
 
