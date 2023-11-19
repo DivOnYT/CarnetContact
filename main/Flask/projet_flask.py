@@ -1,13 +1,17 @@
+# Import des bibliothèques nécessaires
 from flask import Flask, render_template, request, flash
 import sqlite3
 
+# Initialisation de l'application Flask
 app = Flask(__name__)
 
+# Clé secrète utilisée pour la session
 app.secret_key = "d6f12217b2b3ee3a5f0cf986d0e74658217c0b7c63080a6bc39a0e4575b4534c"  # Mot de Passe "CarnetContact" encodé en sha256
 
+# Chemin de la base de données SQLite
 path_bdd = "ContactBDD.db"
 
-
+# Route principale pour la page d'accueil
 @app.route("/")
 def main():
     return render_template('main.html')
@@ -15,6 +19,7 @@ def main():
 
 @app.route("/confirmation", methods=["POST"])
 def add_contact():
+    # Récupération des données du formulaire
     mail = request.form['Mail']
     adresse = request.form['Adresse']
     téléphone = request.form['Téléphone']
@@ -22,8 +27,10 @@ def add_contact():
     prénom = request.form['Prénom']
     nom = request.form['Nom']
 
+    # Initialisation d'une liste d'erreur
     error = [""" Une Erreur dans la saisie est détéctée. """]
 
+    # Validation des données du formulaire et construction de la liste d'erreur le cas échéant
     if mail == "" or (len(mail.split("@")) != 2 and len(mail.split(".") != 2)):
         error.append(f"Le Mail n'est pas conforme '{mail}'. (Ex: carnetContact@gmail.com) ")
     if adresse == "":
@@ -37,9 +44,12 @@ def add_contact():
     if nom == "":
         error.append(f"Le Nom est vide '{nom}'. Ex: De la Proutière")
 
+    # Vérification de la présence d'erreurs
     if len(error) > 1:
+        # Renvoi d'une page de consultation avec les erreurs
         return render_template("consultPage.html", titre="Erreur lors de l'enregistrement", Component="\n".join(error), path="http://localhost:5000/")
     else:
+        # Connexion à la base de données SQLite et tentative d'insertion du contact
         conn = sqlite3.connect(path_bdd)
         cursor = conn.cursor()
         user = (nom, prénom, catégorie, téléphone, mail, adresse)
@@ -54,16 +64,17 @@ def add_contact():
         # Vérifier le nombre de lignes affectées par l'opération d'insertion
         rows_affected = cursor.rowcount
 
+        # Enregistrement des modifications dans la base de données
         conn.commit()
         conn.close()
 
+        # Vérification de l'insertion et renvoi de réponses appropriées
         if rows_affected > 0:
             return render_template("consultPage.html", titre="Enregistrement du Contact Réussi.",
                                    Component=f"Le Contact Suivant a bien été enregistré dans la Base de Données : {nom}  {prénom} {catégorie} '{téléphone}' {adresse}  {mail}", path="http://localhost:5000/")
         else:
             return render_template("consultPage.html", titre="Erreur dans l'Enregistrement du Contact.",
                                    Component=f"Le Contact n'a pas été enregistré dans la base de données car il existe déjà", path="http://localhost:5000/")
-
 
 
 
@@ -114,10 +125,6 @@ def resultat():
         return render_template("consultPage.html", titre="Erreur", Component=f"Le(s) Contact(s) suivant(s) n'existe(nt) pas. Ou la BDD est vide", path="http://localhost:5000/consult")
 
 
-
-#######################################################################################################PAS FAIT
-
-
 @app.route("/suppress")
 def supp():
     return render_template("suppress.html")
@@ -142,9 +149,6 @@ def suppression():
         return render_template("consultPage.html", titre="Erreur dans la Suppression du Contact",
                                Component=f"Le Contact {nom} n'existe pas",
                                path="http://localhost:5000/suppress")
-
-
-###########################################################################################################""
 
 @app.errorhandler(404)
 def page_not_found(e):
