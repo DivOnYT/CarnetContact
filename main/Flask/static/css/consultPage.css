@@ -1,76 +1,86 @@
+/* Réglages généraux pour l'élément HTML */
 html {
-  overflow-x: hidden;
+  overflow-x: hidden; /* Empêche le défilement horizontal */
 }
 
+/* Styles généraux pour le corps de la page */
 body {
-  overflow-x: hidden;
-  position: fixed;
-  background-image: url(../images/HomePage.jpg);
-  background-size: 100vw 100vh;
-  background-position: 100% 100%;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow-x: hidden; /* Empêche le défilement horizontal */
+  position: fixed; /* Fixe la position du corps */
+  background-image: url(../images/HomePage.jpg); /* Image de fond */
+  background-size: 100vw 100vh; /* Taille de l'image de fond */
+  background-position: 100% 100%; /* Position de l'image de fond */
+  height: 100vh; /* Hauteur du corps égale à la hauteur de la fenêtre */
+  width: 100vw; /* Largeur du corps égale à la largeur de la fenêtre */
+  display: flex; /* Utilisation de Flexbox pour la mise en page */
+  justify-content: center; /* Centrage horizontal */
+  align-items: center; /* Centrage vertical */
 }
 
-
+/* Styles pour la classe .ConsultDiv */
 .ConsultDiv {
-    display: flex;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 40px;
-  margin-right: 40px;
-  flex-direction: column;
-
-  position: relative;
-  background: black;
-  text-align: center;
+  display: flex; /* Utilisation de Flexbox */
+  margin-top: 20px; /* Marge supérieure */
+  margin-bottom: 20px; /* Marge inférieure */
+  margin-left: 40px; /* Marge à gauche */
+  margin-right: 40px; /* Marge à droite */
+  flex-direction: column; /* Direction de la colonne pour les éléments enfants */
+  position: relative; /* Position relative pour les éléments enfants positionnés absolument */
+  background: black; /* Couleur de fond */
+  text-align: center; /* Alignement du texte au centre */
+  /* Définition des coins arrondis avec dégradé de couleur */
   border-top-right-radius: 10px;
   border-top-left-radius: 40px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 40px;
+  /* Dégradé de couleur en arrière-plan */
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.36) 10%, rgba(0, 0, 0, 0.25) 80%);
-
 }
 
+/* Styles pour la classe .ConsultationDiv */
 .ConsultationDiv {
-  display: flex;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 40px;
-  margin-right: 40px;
-  flex-direction: column;
+  display: flex; /* Utilisation de Flexbox */
+  margin-top: 20px; /* Marge supérieure */
+  margin-bottom: 20px; /* Marge inférieure */
+  margin-left: 40px; /* Marge à gauche */
+  margin-right: 40px; /* Marge à droite */
+  flex-direction: column; /* Direction de la colonne pour les éléments enfants */
 }
 
+/* Styles pour les balises h1 et p */
 h1, p {
-  color: #FFFFFF;
-    font-size: 50px;
+  color: #FFFFFF; /* Couleur du texte */
+  font-size: 50px; /* Taille de police */
 }
+
+/* Styles pour la classe .Titre */
 .Titre {
-  position: sticky;
-  z-index: 1;
-
+  position: sticky; /* Élément collant lors du défilement */
+  z-index: 1; /* Empilement z pour la superposition */
 }
+
+/* Styles pour la classe .Contacts */
 .Contacts {
-    display: flex;
-    flex-direction: column;
-  justify-content: flex-start;
-    align-items: center;
-  max-height: 100%;
+  display: flex; /* Utilisation de Flexbox */
+  flex-direction: column; /* Direction de la colonne pour les éléments enfants */
+  justify-content: flex-start; /* Alignement du contenu au début */
+  align-items: center; /* Alignement des éléments au centre */
+  max-height: 100%; /* Hauteur maximale égale à la taille maximale de la fenêtre */
 }
 
+/* Styles pour la classe .ContactText */
 .ContactText {
-  font-size: 30px;
+  font-size: 30px; /* Taille de police */
 }
 
+/* Styles pour la classe .HomePage */
 .HomePage {
-  border-radius: 20px;
-  background-color: #FFFFFF;
+  border-radius: 20px; /* Coins arrondis */
+  background-color: #FFFFFF; /* Couleur de fond */
+  /* Coins arrondis différents pour différents coins */
   border-top-right-radius: 10px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 20px;
-  cursor: pointer;
+  cursor: pointer; /* Curseur au survol */
 }

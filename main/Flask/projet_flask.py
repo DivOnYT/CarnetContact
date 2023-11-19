@@ -111,7 +111,7 @@ def resultat():
         print(activate)
         return render_template("consultPage.html", titre=f"Visualisation des Contacts {visu_moyen}", contacts=activate, path="http://localhost:5000/consult")
     else:
-        return render_template("consultPage.html", titre="Erreur", Component=(catégorie, text), path="http://localhost:5000/consult")
+        return render_template("consultPage.html", titre="Erreur", Component=f"Le(s) Contact(s) suivant(s) n'existe(nt) pas. Ou la BDD est vide", path="http://localhost:5000/consult")
 
 
 

@@ -1,36 +1,40 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="../static/css/suppress.css" />
-    <title>Suppression d'un Contacts</title>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<!DOCTYPE html> <!-- Déclaration du type de document: HTML5 -->
+<html> <!-- Début de la balise HTML -->
+
+  <head> <!-- Début de la section d'en-tête du document -->
+    <link rel="stylesheet" href="../static/css/suppress.css" /> <!-- Liaison vers une feuille de style CSS externe -->
+    <title>Suppression d'un Contacts</title> <!-- Titre de la page affiché dans l'onglet du navigateur -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" /> <!-- Métadonnées sur le type de contenu et l'encodage -->
   </head>
-  <body>
-    <div class="ConsultDiv">
-      <div class="ConsultationDiv">
-          <h1>Suppression d'un Contact Par Nom</h1>
-           <form action="http://localhost:5000/suppression" method="post">
-                <div class="suppress-form">
-                    <label class="text-wrapper-2">Nom :</label>
-                    <input type="text" class="div-3" name="Nom" required="required"/>
+
+  <body> <!-- Début de la section du corps du document -->
+    <div class="ConsultDiv"> <!-- Début d'une division avec la classe CSS "ConsultDiv" -->
+      <div class="ConsultationDiv"> <!-- Début d'une division avec la classe CSS "ConsultationDiv" -->
+          <h1>Suppression d'un Contact Par Nom</h1> <!-- Titre de niveau 1 pour indiquer la suppression par nom -->
+
+           <form action="http://localhost:5000/suppression" method="post"> <!-- Début d'un formulaire avec action et méthode de soumission -->
+                <div class="suppress-form"> <!-- Début d'une division avec la classe CSS "suppress-form" -->
+                    <label class="text-wrapper-2">Nom :</label> <!-- Étiquette pour le champ de saisie du nom à supprimer -->
+                    <input type="text" class="div-3" name="Nom" required="required"/> <!-- Champ de saisie du nom avec une contrainte de saisie obligatoire -->
                 </div>
 
-                <div class="SuppressDiv">
-                    <button type="submit" class="suppress">
-                        <h4>Supprimer le Contact</h4>
+                <div class="SuppressDiv"> <!-- Début d'une division avec la classe CSS "SuppressDiv" -->
+                    <button type="submit" class="suppress"> <!-- Bouton pour soumettre le formulaire de suppression -->
+                        <h4>Supprimer le Contact</h4> <!-- Texte à afficher sur le bouton -->
                     </button>
                 </div>
            </form>
-          <div class="HomePageDiv">
-              <a href="http://localhost:5000/">
-                <button  class="HomePage">
-                    <h4>Retour en arrière</h4>
+
+          <div class="HomePageDiv"> <!-- Début d'une division avec la classe CSS "HomePageDiv" -->
+              <a href="http://localhost:5000/"> <!-- lien vers la page d'accueil -->
+                <button  class="HomePage"> <!-- Bouton pour revenir à la page d'accueil -->
+                    <h4>Retour en arrière</h4> <!-- Texte à afficher sur le bouton -->
                 </button>
               </a>
           </div>
 
+      </div> <!-- Fin de la division "ConsultationDiv" -->
+    </div> <!-- Fin de la division "ConsultDiv" -->
+  </body> <!-- Fin de la section du corps du document -->
 
-    </div>
-    </div>
-  </body>
-</html>
+</html> <!-- Fin de la balise HTML -->

@@ -1,37 +1,39 @@
-<!DOCTYPE html>
-<html>
-  <head>
-      <link rel="stylesheet" href="../static/css/consultPage.css" />
-      <title>{{ titre }}</title>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<!DOCTYPE html> <!-- Déclaration du type de document: HTML5 -->
+<html> <!-- Début de la balise HTML -->
 
+  <head> <!-- Début de la section d'en-tête du document -->
+      <link rel="stylesheet" href="../static/css/consultPage.css" /> <!-- Liaison vers une feuille de style CSS externe -->
+      <title>{{ titre }}</title> <!-- Titre de la page affiché dans l'onglet du navigateur -->
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" /> <!-- Métadonnées sur le type de contenu et l'encodage -->
   </head>
-  <body>
-    <div class="ConsultDiv">
-      <div class="ConsultationDiv">
-          <div class="Titre">
-            <h1>{{ titre }}</h1>
+
+  <body> <!-- Début de la section du corps du document -->
+    <div class="ConsultDiv"> <!-- Début d'une division avec la classe CSS "ConsultDiv" -->
+      <div class="ConsultationDiv"> <!-- Début d'une division avec la classe CSS "ConsultationDiv" -->
+          <div class="Titre"> <!-- Début d'une division avec la classe CSS "Titre" pour le titre -->
+            <h1>{{ titre }}</h1> <!-- Titre de niveau 1 récupéré depuis une variable "titre" -->
           </div>
-          <div class="Contacts">
-            <p class="ContactText">
-                {{ Component }}
-                {% if contacts %}
-                    <ul>
-                        {% for contact in contacts %}
-                            <p class="ContactText">{{ contact }}</p>
+          <div class="Contacts"> <!-- Début d'une division avec la classe CSS "Contacts" pour afficher les contacts -->
+            <p class="ContactText"> <!-- Paragraphe avec la classe CSS "ContactText" -->
+                {{ Component }} <!-- Affichage d'un composant récupéré depuis une variable "Component" -->
+                {% if contacts %} <!-- Vérification si la variable "contacts" est définie -->
+                    <ul> <!-- Début d'une liste non ordonnée -->
+                        {% for contact in contacts %} <!-- Boucle pour chaque contact dans la variable "contacts" -->
+                            <p class="ContactText">{{ contact }}</p> <!-- Affichage de chaque contact -->
                         {% endfor %}
-                    </ul>
+                    </ul> <!-- Fin de la liste non ordonnée -->
                 {% endif %}
-            </p>
+            </p> <!-- Fin du paragraphe -->
+          </div> <!-- Fin de la division "Contacts" -->
 
-          </div>
-          <a href="{{ path }}">
-            <button  class="HomePage">
-                <h4>Revenir en Arrière</h4>
+          <a href="{{ path }}"> <!-- Lien vers une autre page, l'URL récupérée depuis une variable "path" -->
+            <button  class="HomePage"> <!-- Bouton pour revenir en arrière -->
+                <h4>Revenir en Arrière</h4> <!-- Texte à afficher sur le bouton -->
             </button>
-          </a>
+          </a> <!-- Fin du lien -->
 
-    </div>
-    </div>
-  </body>
-</html>
+      </div> <!-- Fin de la division "ConsultationDiv" -->
+    </div> <!-- Fin de la division "ConsultDiv" -->
+  </body> <!-- Fin de la section du corps du document -->
+
+</html> <!-- Fin de la balise HTML -->

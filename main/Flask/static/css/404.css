@@ -1,50 +1,58 @@
+/* Réglage général pour l'élément HTML */
 html {
-  overflow: hidden;
+  overflow: hidden; /* Empêche le défilement de la page */
 }
 
+/* Styles pour le corps de la page */
 body {
-  position: absolute;
-  background-image: url(../images/HomePage.jpg);
-  background-size: 100vw 100vh;
-  background-position: 100% 100%;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute; /* Position absolue pour le corps */
+  background-image: url(../images/HomePage.jpg); /* Image de fond */
+  background-size: 100vw 100vh; /* Taille de l'image de fond */
+  background-position: 100% 100%; /* Position de l'image de fond */
+  height: 100vh; /* Hauteur du corps égale à la hauteur de la fenêtre */
+  width: 100vw; /* Largeur du corps égale à la largeur de la fenêtre */
+  display: flex; /* Utilisation de Flexbox pour la mise en page */
+  justify-content: center; /* Centrage horizontal */
+  align-items: center; /* Centrage vertical */
 }
 
+/* Styles pour la classe .Error */
 .Error {
-  position: relative;
-  background: black;
-  text-align: center;
+  position: relative; /* Position relative */
+  background: black; /* Couleur de fond */
+  text-align: center; /* Alignement du texte au centre */
+  /* Définition des coins arrondis avec dégradé de couleur */
   border-top-right-radius: 10px;
   border-top-left-radius: 40px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 40px;
+  /* Dégradé de couleur en arrière-plan */
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.36) 10%, rgba(0, 0, 0, 0.25) 80%);
-
 }
 
+/* Styles pour la classe .HomePage */
 .HomePage {
-  border-radius: 20px;
-  background-color: #FFFFFF;
+  border-radius: 20px; /* Coins arrondis */
+  background-color: #FFFFFF; /* Couleur de fond */
+  /* Coins arrondis différents pour différents coins */
   border-top-right-radius: 10px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 20px;
-  cursor: pointer;
+  cursor: pointer; /* Curseur au survol */
 }
 
+/* Styles pour la classe .Erreur */
 .Erreur {
-  display: flex;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 40px;
-  margin-right: 40px;
-  flex-direction: column;
+  display: flex; /* Utilisation de Flexbox */
+  margin-top: 20px; /* Marge supérieure */
+  margin-bottom: 20px; /* Marge inférieure */
+  margin-left: 40px; /* Marge à gauche */
+  margin-right: 40px; /* Marge à droite */
+  flex-direction: column; /* Direction de la colonne pour les éléments enfants */
 }
 
+/* Styles pour les balises h1 et p */
 h1, p {
-  color: #FFFFFF;
+  color: #FFFFFF; /* Couleur du texte */
 }

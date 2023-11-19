@@ -1,97 +1,92 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Déclaration du type de document HTML -->
 <html>
   <head>
-    <link rel="stylesheet" href="../static/css/main.css" />
-    <title>Page d'accueil</title>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../static/css/main.css" /> <!-- Lien vers une feuille de style CSS -->
+    <title>Page d'accueil</title> <!-- Titre de la page -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" /> <!-- Méta-données du document -->
   </head>
   <body>
-    <div class="home-page">
+    <div class="home-page"> <!-- Div principale de la page d'accueil -->
       <div class="div">
         <div class="form">
           <div class="links">
-            <a href="http://localhost:5000/consult">
-            <div class="consultation-button" >
-              <div class="overlap-group">
-                <button class="div-2">
-                  <h1 class="text-wrapper">Consultation des Informations</h1>
-                </button>
-
+            <a href="http://localhost:5000/consult"> <!-- Lien vers une consultation -->
+              <div class="consultation-button">
+                <div class="overlap-group">
+                  <button class="div-2">
+                    <h1 class="text-wrapper">Consultation des Informations</h1> <!-- Titre pour la consultation -->
+                  </button>
+                </div>
               </div>
-            </div>
-              </a>
-            <a href="http://localhost:5000/suppress">
-            <div class="supress-button-form">
-              <div class="overlap-group">
-                <button class="div-2">
-                  <h1 class="text-wrapper">Suppression&nbsp;&nbsp;d’un contact avec le nom</h1>
-                </button>
-
+            </a>
+            <a href="http://localhost:5000/suppress"> <!-- Lien pour la suppression -->
+              <div class="supress-button-form">
+                <div class="overlap-group">
+                  <button class="div-2">
+                    <h1 class="text-wrapper">Suppression d’un contact avec le nom</h1> <!-- Titre pour la suppression -->
+                  </button>
+                </div>
               </div>
-            </div>
-              </a>
-            <div class="text-de-contactform-2">Actions Carnet de Contacts</div>
+            </a>
+            <div class="text-de-contactform-2">Actions Carnet de Contacts</div> <!-- Texte pour les actions -->
           </div>
 
-
-
+          <!-- Formulaire pour l'ajout de contact -->
           <form class="contact-form" action="http://localhost:5000/confirmation" method="post">
             <div class="overlap">
-
-
+              <!-- Différents champs pour les informations de contact -->
               <div class="button-form">
                 <div class="overlap-group-2">
-                  <button type="submit" class="button-submit"/>
+                  <button type="submit" class="button-submit">
                     <div class="button-text">Envoyer</div>
                   </button>
                 </div>
               </div>
 
               <div class="adress-form">
-                <label class="text-wrapper-2">Adresse* :</label>
-                <input type="text" name="Adresse" class="div-3" required="required"/>
+                <label class="text-wrapper-2">Adresse* :</label> <!-- Champ pour l'adresse -->
+                <input type="text" name="Adresse" class="div-3" required="required"/> <!-- Input pour l'adresse -->
               </div>
 
               <div class="mail-form">
-                <label class="text-wrapper-2">Mail* :</label>
-                <input type="email" name="Mail" class="div-3" required="required"/>
+                <label class="text-wrapper-2">Mail* :</label> <!-- Champ pour l'adresse email -->
+                <input type="email" name="Mail" class="div-3" required="required"/> <!-- Input pour l'adresse email -->
               </div>
 
               <div class="telephone-form">
-                <label class="text-wrapper-2">Tel* : <h6>(Ex: +689 89 89 89 89)</h6></label>
-                <input type="tel" pattern="\+\d{2,3}\s(?:\d{2}\s){3}\d{2}" name="Téléphone" class="div-3" required="required"/>
+                <label class="text-wrapper-2">Tel* : <h6>(Ex: +689 89 89 89 89)</h6></label> <!-- Champ pour le numéro de téléphone -->
+                <input type="tel" pattern="\+\d{2,3}\s(?:\d{2}\s){3}\d{2}" name="Téléphone" class="div-3" required="required"/> <!-- Input pour le numéro de téléphone -->
               </div>
 
               <div class="categorie-form">
-                <label class="text-wrapper-2" for="catégorie">Catégorie* :</label>
+                <label class="text-wrapper-2" for="catégorie">Catégorie* :</label> <!-- Champ pour la catégorie -->
                 <div class="overlap-3">
-					<select id="catégorie"  class="categorie-box" name="Catégorie" required="required">
-  						<option class="p" value="">--Choisis une option--</option>
-  						<option  class="p" value="famille">Famille</option>
-  						<option class="p" value="travail">Travail</option>
-  						<option class="p" value="amis">Amis</option>
-                    </select>
+                  <select id="catégorie"  class="categorie-box" name="Catégorie" required="required"> <!-- Sélecteur pour la catégorie -->
+                    <option class="p" value="">--Choisis une option--</option>
+                    <option  class="p" value="famille">Famille</option>
+                    <option class="p" value="travail">Travail</option>
+                    <option class="p" value="amis">Amis</option>
+                  </select>
                 </div>
               </div>
 
               <div class="prenom-form">
-                <label class="text-wrapper-2">Prénom* :</label>
-                <input type="text" class="div-3" name="Prénom" required="required"/>
+                <label class="text-wrapper-2">Prénom* :</label> <!-- Champ pour le prénom -->
+                <input type="text" class="div-3" name="Prénom" required="required"/> <!-- Input pour le prénom -->
               </div>
 
               <div class="nom-form">
-                <label class="text-wrapper-2">Nom* :</label>
-                <input type="text" class="div-3" name="Nom" required="required"/>
+                <label class="text-wrapper-2">Nom* :</label> <!-- Champ pour le nom -->
+                <input type="text" class="div-3" name="Nom" required="required"/> <!-- Input pour le nom -->
               </div>
 
-              <div class="text-de-contactform-3">Ajout de Contact</div>
+              <div class="text-de-contactform-3">Ajout de Contact</div> <!-- Texte pour l'ajout de contact -->
             </div>
           </form>
 
-
         </div>
-        </div>
-        </div>
-    <p class="text-de-contactform">Made by Johann &amp; Côme</p>
+      </div>
+    </div>
+    <p class="text-de-contactform">Made by Johann &amp; Côme</p> <!-- Crédits -->
   </body>
 </html>

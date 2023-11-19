@@ -1,117 +1,130 @@
 html {
-  overflow: hidden;
+  overflow: hidden; /* Empêche le défilement vertical sur la page HTML */
 }
 
 body {
-  position: absolute;
-  background-image: url(../images/HomePage.jpg);
-  background-size: 100vw 100vh;
-  background-position: 100% 100%;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute; /* Position absolue pour mieux contrôler l'arrière-plan */
+  background-image: url(../images/HomePage.jpg); /* Image d'arrière-plan */
+  background-size: 100vw 100vh; /* Taille de l'image pour occuper toute la fenêtre */
+  background-position: 100% 100%; /* Positionnement de l'image à droite et en bas */
+  height: 100vh; /* Hauteur équivalente à la hauteur de la fenêtre */
+  width: 100vw; /* Largeur équivalente à la largeur de la fenêtre */
+  display: flex; /* Utilisation de Flexbox pour le centrage des éléments */
+  justify-content: center; /* Centrage horizontal des éléments */
+  align-items: center; /* Centrage vertical des éléments */
 }
 
+/* Styles pour la classe .ConsultDiv */
 .ConsultDiv {
-    display: flex;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 40px;
-  margin-right: 40px;
-  flex-direction: column;
-
-  position: relative;
-  background: black;
-  text-align: center;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 40px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 40px;
+  display: flex; /* Utilisation de Flexbox pour .ConsultDiv */
+  margin-top: 20px; /* Marge supérieure de 20px */
+  margin-bottom: 20px; /* Marge inférieure de 20px */
+  margin-left: 40px; /* Marge à gauche de 40px */
+  margin-right: 40px; /* Marge à droite de 40px */
+  flex-direction: column; /* Contenu aligné en colonnes */
+  position: relative; /* Position relative pour .ConsultDiv */
+  background: black; /* Fond noir */
+  text-align: center; /* Alignement du texte au centre */
+  border-top-right-radius: 10px; /* Rayon de bordure supérieur droit */
+  border-top-left-radius: 40px; /* Rayon de bordure supérieur gauche */
+  border-bottom-left-radius: 10px; /* Rayon de bordure inférieur gauche */
+  border-bottom-right-radius: 40px; /* Rayon de bordure inférieur droit */
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.36) 10%, rgba(0, 0, 0, 0.25) 80%);
-
+  /* Dégradé linéaire pour le fond */
 }
 
+/* Styles pour la classe .ConsultationDiv */
 .ConsultationDiv {
-  display: flex;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 40px;
-  margin-right: 40px;
-  flex-direction: column;
+  display: flex; /* Utilisation de Flexbox pour .ConsultationDiv */
+  margin-top: 20px; /* Marge supérieure de 20px */
+  margin-bottom: 20px; /* Marge inférieure de 20px */
+  margin-left: 40px; /* Marge à gauche de 40px */
+  margin-right: 40px; /* Marge à droite de 40px */
+  flex-direction: column; /* Contenu aligné en colonnes */
 }
 
+/* Styles pour les éléments h1 et p */
 h1, p {
-  color: #FFFFFF;
-    font-size: 50px;
+  color: #FFFFFF; /* Couleur du texte en blanc */
+  font-size: 50px; /* Taille de la police à 50 pixels */
 }
 
+/* Styles pour la classe .categorie-box */
 .categorie-box {
-  position: relative;
-  width: 518px;
-  height: 58px;
-  border-radius: 20px;
+  position: relative; /* Position relative pour .categorie-box */
+  width: 518px; /* Largeur de 518 pixels */
+  height: 58px; /* Hauteur de 58 pixels */
+  border-radius: 20px; /* Rayon de bordure de 20 pixels */
   background: linear-gradient(180deg, rgb(217, 217, 217) 0%, rgba(217, 217, 217, 0.3) 100%);
+  /* Dégradé linéaire pour le fond de .categorie-box */
 }
 
+/* Styles pour la classe .suppress-form */
 .suppress-form {
-  width: 761px;
-  height: 99px;
-  position: relative;
+  width: 761px; /* Largeur de 761 pixels */
+  height: 99px; /* Hauteur de 99 pixels */
+  position: relative; /* Position relative pour .suppress-form */
 }
 
+/* Styles pour la classe .text-wrapper-2 */
 .text-wrapper-2 {
-  position: relative;
-  width: 163px;
-  font-family: "Palanquin Dark-Regular", sans-serif;
-  font-weight: 400;
-  color: #FFFFFF;
-  font-size: 30px;
-  text-align: right;
-  letter-spacing: 0;
-  line-height: normal;
+  position: relative; /* Position relative pour .text-wrapper-2 */
+  width: 163px; /* Largeur de 163 pixels */
+  font-family: "Palanquin Dark-Regular", sans-serif; /* Famille de police spécifique */
+  font-weight: 400; /* Poids de la police */
+  color: #FFFFFF; /* Couleur du texte en blanc */
+  font-size: 30px; /* Taille de la police à 30 pixels */
+  text-align: right; /* Alignement du texte à droite */
+  letter-spacing: 0; /* Espacement des lettres */
+  line-height: normal; /* Hauteur de ligne normale */
 }
 
+/* Styles pour la classe .div-3 */
 .div-3 {
-  position: relative;
-  width: 518px;
-  height: 58px;
-  border-radius: 20px;
+  position: relative; /* Position relative pour .div-3 */
+  width: 518px; /* Largeur de 518 pixels */
+  height: 58px; /* Hauteur de 58 pixels */
+  border-radius: 20px; /* Rayon de bordure de 20 pixels */
   background: linear-gradient(180deg, rgb(217, 217, 217) 0%, rgba(217, 217, 217, 0.3) 100%);
+  /* Dégradé linéaire pour le fond de .div-3 */
 }
 
+/* Styles pour la classe .suppress */
 .suppress {
-  position: relative;
-  top: 10px;
-  width: 297px;
-  height: 61px;
-  border-radius: 20px;
+  position: relative; /* Position relative pour .suppress */
+  top: 10px; /* Décalage de 10 pixels vers le haut */
+  width: 297px; /* Largeur de 297 pixels */
+  height: 61px; /* Hauteur de 61 pixels */
+  border-radius: 20px; /* Rayon de bordure de 20 pixels */
   background: linear-gradient(180deg, rgba(46, 46, 80, 0.64) 0%, rgba(246, 169, 125, 0.8) 100%);
-  cursor: pointer;
+  /* Dégradé linéaire pour le fond de .suppress */
+  cursor: pointer; /* Curseur de type pointer au survol */
 }
 
+/* Styles pour la classe .SuppressDiv */
 .SuppressDiv {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative; /* Position relative pour .SuppressDiv */
+  display: flex; /* Utilisation de Flexbox pour .SuppressDiv */
+  justify-content: center; /* Centrage horizontal */
+  align-items: center; /* Centrage vertical */
 }
 
+/* Styles pour la classe .HomePage */
 .HomePage {
-  border-radius: 20px;
-  background-color: #FFFFFF;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 20px;
-  cursor: pointer;
-    margin-top: 60px;
+  border-radius: 20px; /* Rayon de bordure de 20 pixels */
+  background-color: #FFFFFF; /* Couleur de fond blanche */
+  border-top-right-radius: 10px; /* Rayon de bordure supérieure droite */
+  border-top-left-radius: 20px; /* Rayon de bordure supérieure gauche */
+  border-bottom-left-radius: 10px; /* Rayon de bordure inférieure gauche */
+  border-bottom-right-radius: 20px; /* Rayon de bordure inférieure droite */
+  cursor: pointer; /* Curseur de type pointer au survol */
+  margin-top: 60px; /* Marge supérieure de 60 pixels */
 }
 
+/* Styles pour la classe .HomePageDiv */
 .HomePageDiv {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative; /* Position relative pour .HomePageDiv */
+  display: flex; /* Utilisation de Flexbox pour .HomePageDiv */
+  justify-content: center; /* Centrage horizontal */
+  align-items: center; /* Centrage vertical */
 }
