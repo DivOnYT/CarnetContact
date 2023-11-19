@@ -89,6 +89,15 @@ def resultat():
     if catégorie == "lettre":
         cursor.execute(
             f"SELECT nom,prenom,catégorie,teléphone,mail,adresse FROM ContactBDD WHERE lettre == {request.form['Rechercher']}")
+    if catégorie == "prenom":
+        cursor.execute(
+            f"SELECT nom,prenom,catégorie,teléphone,mail,adresse FROM ContactBDD WHERE prenom == {request.form['Rechercher']}")
+    if catégorie == "mail":
+        cursor.execute(
+            f"SELECT nom,prenom,catégorie,teléphone,mail,adresse FROM ContactBDD WHERE mail == {request.form['Rechercher']}")
+    if catégorie == "adresse":
+        cursor.execute(
+            f"SELECT nom,prenom,catégorie,teléphone,mail,adresse FROM ContactBDD WHERE adresse == {request.form['Rechercher']}")
 
 
 @app.route("/suppress")
